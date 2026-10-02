@@ -54,8 +54,8 @@ jobs:
           - {os: ubuntu,      version: "24.04",  context: ubuntu,          file: ubuntu/Containerfile-24.04}
           - {os: ubuntu,      version: "26.04",  context: ubuntu,          file: ubuntu/Containerfile-26.04}
         include:
-          - {platform: linux/amd64, runner: ubuntu-latest,    platform_pair: linux-amd64}
-          - {os: almalinux,   version: "10-x86_64_v2",     context: almalinux-10,    file: almalinux-10/Containerfile-x86_64_v2}
+          - arch: {platform: linux/amd64, runner: ubuntu-latest,    platform_pair: linux-amd64}
+            image: {os: almalinux,   version: "10-x86_64_v2",     context: almalinux-10,    file: almalinux-10/Containerfile-x86_64_v2}
 
     permissions:
       contents: read
